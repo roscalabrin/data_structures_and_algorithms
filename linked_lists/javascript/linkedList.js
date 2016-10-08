@@ -4,6 +4,17 @@ function List() {
 }
 
 List.prototype.push = function(data) {
-  this.head = new ListNode(data);
-  this._length = 1;
+  var node = new ListNode(data);
+  var currentNode = this.head;
+  
+  if (!currentNode) {
+    this.head = node;
+    this._length ++;
+  } else {
+    while (currentNode.nextNode) {
+      currentNode = currentNode.nextNode;
+    }
+    currentNode.nextNode = node;
+    this._length ++;
+  }
 }

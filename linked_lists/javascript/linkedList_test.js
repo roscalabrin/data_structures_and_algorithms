@@ -27,14 +27,14 @@ describe('LinkedList', function() {
     });
 
     context('with multiple elements', function(){
-      it.skip('should increment the length count', function(){
+      it('should increment the length count', function(){
         list.push('pizza');
         list.push('stromboli');
         list.push('mushroom');
         expect(list._length).to.eq(3);
       });
 
-      it.skip('should assign the head to the first element pushed', function(){
+      it('should assign the head to the first element pushed', function(){
         expect(list.head).to.eq(null);
         list.push('pizza');
         expect(list.head.data).to.eq('pizza');
@@ -42,13 +42,13 @@ describe('LinkedList', function() {
         expect(list.head.data).to.eq('pizza');
       });
 
-      it.skip('should attach the second element to the first element', function(){
+      it('should attach the second element to the first element', function(){
         list.push('pizza');
         list.push('stromboli');
         expect(list.head.nextNode.data).to.eq('stromboli');
       });
 
-      it.skip('should attach nextNodes in sequential order', function(){
+      it('should attach nextNodes in sequential order', function(){
         list.push('pizza');
         list.push('stromboli');
         list.push('mushroom');
