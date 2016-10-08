@@ -63,29 +63,29 @@ describe('LinkedList', function() {
 
   describe('.pop', function(){
     context('with no elements', function(){
-      it.skip('should return null', function(){
+      it('should return null', function(){
         expect(list.pop()).to.eq(null);
       });
 
-      it.skip('should not decrement the _length', function(){
+      it('should not decrement the _length', function(){
         expect(list._length).to.eq(0);
       });
     });
 
     context('with one element', function(){
-      it.skip('should change the _length', function(){
+      it('should change the _length', function(){
         list.push('hello');
         var result = list.pop();
         expect(list._length).to.eq(0);
       });
 
-      it.skip('should set the list head to null', function(){
+      it('should set the list head to null', function(){
         list.push('hello');
         var result = list.pop();
         expect(list.head).to.eq(null);
       });
 
-      it.skip('should return the last element', function(){
+      it('should return the last element', function(){
         list.push('hello');
         var result = list.pop();
         expect(result.data).to.eq('hello');

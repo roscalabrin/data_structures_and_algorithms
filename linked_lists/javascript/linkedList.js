@@ -18,3 +18,23 @@ List.prototype.push = function(data) {
     this._length ++;
   }
 }
+
+List.prototype.pop = function() {
+  var currentNode = this.head;
+  
+  if (!currentNode) {
+    return null
+  } else {
+    while(currentNode.nextNode) {
+      currentNode = currentNode.nextNode;
+    }
+    if (this.head === currentNode) {
+      this.head = null;
+    } else {
+      currentNode = null;
+    }
+    this._length --;
+    return currentNode;
+  }
+  
+}
