@@ -5,22 +5,22 @@ describe('LinkedList', function() {
     list = new List();
   });
 
-  it.skip('should start with zero elements', function() {
+  it('should start with zero elements', function() {
     expect(list._length).to.eq(0);
   });
 
-  it.skip('should set its default head to null', function(){
+  it('should set its default head to null', function(){
     expect(list.head).to.eq(null);
   });
 
   describe('.push', function(){
     context('with a single element', function(){
-      it.skip('should allow push of a single element to a list', function(){
+      it('should allow push of a single element to a list', function(){
         list.push('pizza');
         expect(list.head.data).to.eq('pizza');
       });
 
-      it.skip('should increment the _length of the list', function(){
+      it('should increment the _length of the list', function(){
         list.push('pizza');
         expect(list._length).to.eq(1);
       });
